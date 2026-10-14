@@ -1,4 +1,4 @@
-name: Build UltraLite Recorder
+name: Build UltraLite Recorder Pro
 
 'on':
   workflow_dispatch:
@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -36,6 +37,6 @@ jobs:
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
-          name: UltraLiteRecorder-debug-apk
+          name: UltraLiteRecorderPro-debug-apk
           path: UltraLiteRecorder/app/build/outputs/apk/debug/app-debug.apk
           if-no-files-found: error
